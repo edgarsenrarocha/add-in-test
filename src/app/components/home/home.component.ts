@@ -1,5 +1,5 @@
 import { Component, OnDestroy } from '@angular/core';
-import { getLocationOriginWithPath } from 'src/app/msal/msal-application.module';
+import { getLocationOriginWithPath } from 'src/app/app.module';
 
 @Component({
   selector: 'app-home',
