@@ -13,7 +13,9 @@ import { LoginComponent } from './components/login/login.component';
 import { HomeComponent } from './components/home/home.component';
 
 export function getLocationOriginWithPath(path: string): string {
-  return `${window.location.origin}${window.location.origin.endsWith('/') ? '' : '/'}${path}`;
+  const url = `${window.location.origin}${window.location.origin.endsWith('/') ? '' : '/'}${path}`;
+  console.log('App_URL', url);
+  return url;
 }
 
 const isIE = window.navigator.userAgent.indexOf("MSIE ") > -1 || window.navigator.userAgent.indexOf("Trident/") > -1; // Remove this line to use Angular Universal
