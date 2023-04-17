@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0" xmlns:ov="http://schemas.microsoft.com/office/taskpaneappversionoverrides" xsi:type="TaskPaneApp">
+  <Id>bddbc004-435c-476c-a12c-71848435bfee</Id>
+  <Version>1.0.0.0</Version>
+  <ProviderName>Rulestar</ProviderName>
+  <DefaultLocale>en-AU</DefaultLocale>
+  <DisplayName DefaultValue="Local"/>
+  <Description DefaultValue="Rulestar Word Add-in"/>
+  <IconUrl DefaultValue="https://localhost:3000/assets/favicon.png"/>
+  <HighResolutionIconUrl DefaultValue="https://localhost:3000/assets/favicon64x64.png"/>
+  <SupportUrl DefaultValue="https://training.rulestar.com/"/>
+  <AppDomains>
+    <AppDomain>https://localhost:3000</AppDomain>
+  </AppDomains>
+
+  <Hosts>
+    <Host Name="Document"/>
+  </Hosts>
+
+  <DefaultSettings>
+    <SourceLocation DefaultValue="https://localhost:3000/" />
+  </DefaultSettings>
+
+  <Permissions>ReadWriteDocument</Permissions>
+
+  <VersionOverrides xmlns="http://schemas.microsoft.com/office/taskpaneappversionoverrides" xsi:type="VersionOverridesV1_0">
+    <Hosts>
+      <Host xsi:type="Document">
+        <DesktopFormFactor>
+          <GetStarted>
+            <Title resid="GetStarted.Title"/>
+            <Description resid="GetStarted.Description"/>
+            <LearnMoreUrl resid="GetStarted.LearnMoreUrl"/>
+          </GetStarted>
+
+          <FunctionFile resid="Commands.Url"/>
+
+          <ExtensionPoint xsi:type="PrimaryCommandSurface">
+
+            <OfficeTab id="TabHome">
+              <Group id="CommandsGroup">
+                <Label resid="CommandsGroup.Label"/>
+                <Icon>
+                  <bt:Image size="16" resid="Icon.16x16"/>
+                  <bt:Image size="32" resid="Icon.32x32"/>
+                  <bt:Image size="80" resid="Icon.80x80"/>
+                </Icon>
+                <Control xsi:type="Button" id="TaskpaneButton">
+                  <Label resid="TaskpaneButton.Label"/>
+                  <Supertip>
+                    <Title resid="TaskpaneButton.Label"/>
+                    <Description resid="TaskpaneButton.Tooltip"/>
+                  </Supertip>
+                  <Icon>
+                    <bt:Image size="16" resid="Icon.16x16"/>
+                    <bt:Image size="32" resid="Icon.32x32"/>
+                    <bt:Image size="80" resid="Icon.80x80"/>
+                  </Icon>
+                  <Action xsi:type="ShowTaskpane">
+                    <TaskpaneId>ButtonId1</TaskpaneId>
+                    <SourceLocation resid="Taskpane.Url"/>
+                  </Action>
+                </Control>
+              </Group>
+            </OfficeTab>
+
+            <CustomTab id="Rulestar.Tab1">
+              <Group id="Rulestar.Tab1.Group1">
+                <Label resid="CommandsGroup.Label"/>
+                <Icon>
+                  <bt:Image size="16" resid="Icon.16x16"/>
+                  <bt:Image size="32" resid="Icon.32x32"/>
+                  <bt:Image size="80" resid="Icon.80x80"/>
+                </Icon>
+                <Control xsi:type="Button" id="TaskpaneButton2">
+                  <Label resid="TaskpaneButton.Label"/>
+                  <Supertip>
+                    <Title resid="TaskpaneButton.Label"/>
+                    <Description resid="TaskpaneButton.Tooltip"/>
+                  </Supertip>
+                  <Icon>
+                    <bt:Image size="16" resid="Icon.16x16"/>
+                    <bt:Image size="32" resid="Icon.32x32"/>
+                    <bt:Image size="80" resid="Icon.80x80"/>
+                  </Icon>
+                  <Action xsi:type="ShowTaskpane">
+                    <TaskpaneId>ButtonId1</TaskpaneId>
+                    <SourceLocation resid="Taskpane.Url"/>
+                  </Action>
+                </Control>
+                <Control xsi:type="Button" id="TaskpaneButton3">
+                  <Label resid="TaskpaneButton3.Label"/>
+                  <Supertip>
+                    <Title resid="TaskpaneButton3.Label"/>
+                    <Description resid="TaskpaneButton3.Tooltip"/>
+                  </Supertip>
+                  <Icon>
+                    <bt:Image size="16" resid="Icon.List.16x16"/>
+                    <bt:Image size="32" resid="Icon.List.32x32"/>
+                    <bt:Image size="80" resid="Icon.List.80x80"/>
+                  </Icon>
+                  <Action xsi:type="ShowTaskpane">
+                    <TaskpaneId>ButtonId2</TaskpaneId>
+                    <SourceLocation resid="Taskpane.Url2"/>
+                  </Action>
+                </Control>
+              </Group>
+
+              <!-- Label of your tab -->
+              <!-- If validating with XSD it needs to be at the end, we might change this before release -->
+              <Label resid="Rulestar.Tab1.TabLabel" />
+            </CustomTab>
+          </ExtensionPoint>
+
+          <ExtensionPoint xsi:type="ContextMenu">
+            <OfficeMenu id="ContextMenuText">
+              <Control xsi:type="Menu" id="Rulestar.Menu.CC">
+                <Label resid="Rulestar.Menu.CC.Label" />
+                <Supertip>
+                  <Title resid="Rulestar.Menu.CC.Label" />
+                  <Description resid="Rulestar.Menu.CC.Tooltip" />
+                </Supertip>
+                <Icon>
+                  <bt:Image size="16" resid="Icon.CC.16x16" />
+                  <bt:Image size="32" resid="Icon.CC.32x32" />
+                  <bt:Image size="80" resid="Icon.CC.80x80" />
+                </Icon>
+                <Items>
+                  <Item id="Rulestar.Menu.CC.Remove">
+                    <Label resid="Rulestar.Menu.CC.Remove.Label"/>
+                    <Supertip>
+                      <Title resid="Rulestar.Menu.CC.Remove.Label" />
+                      <Description resid="Rulestar.Menu.CC.Remove.Tooltip" />
+                    </Supertip>
+                    <Icon>
+                      <bt:Image size="16" resid="Icon.Remove.16x16" />
+                      <bt:Image size="32" resid="Icon.Remove.32x32" />
+                      <bt:Image size="80" resid="Icon.Remove.80x80" />
+                    </Icon>
+                    <Action xsi:type="ExecuteFunction">
+                      <FunctionName>removeContentControl</FunctionName>
+                    </Action>
+                  </Item>
+                </Items>
+              </Control>
+            </OfficeMenu>
+          </ExtensionPoint>
+        </DesktopFormFactor>
+      </Host>
+    </Hosts>
+    <Resources>
+      <bt:Images>
+        <bt:Image id="Icon.16x16" DefaultValue="https://localhost:3000/assets/favicon.png"/>
+        <bt:Image id="Icon.32x32" DefaultValue="https://localhost:3000/assets/favicon.png"/>
+        <bt:Image id="Icon.80x80" DefaultValue="https://localhost:3000/assets/favicon.png"/>
+
+        <bt:Image id="Icon.CC.16x16" DefaultValue="https://localhost:3000/assets/icons/cc-icon.png"/>
+        <bt:Image id="Icon.CC.32x32" DefaultValue="https://localhost:3000/assets/icons/cc-icon.png"/>
+        <bt:Image id="Icon.CC.80x80" DefaultValue="https://localhost:3000/assets/icons/cc-icon.png"/>
+
+        <bt:Image id="Icon.Remove.16x16" DefaultValue="https://localhost:3000/assets/icons/remove-icon.png"/>
+        <bt:Image id="Icon.Remove.32x32" DefaultValue="https://localhost:3000/assets/icons/remove-icon.png"/>
+        <bt:Image id="Icon.Remove.80x80" DefaultValue="https://localhost:3000/assets/icons/remove-icon.png"/>
+
+        <bt:Image id="Icon.List.16x16" DefaultValue="https://localhost:3000/assets/icons/list-icon.png"/>
+        <bt:Image id="Icon.List.32x32" DefaultValue="https://localhost:3000/assets/icons/list-icon.png"/>
+        <bt:Image id="Icon.List.80x80" DefaultValue="https://localhost:3000/assets/icons/list-icon.png"/>
+      </bt:Images>
+      <bt:Urls>
+        <bt:Url id="GetStarted.LearnMoreUrl" DefaultValue="https://www.rulestar.com"/>
+        <bt:Url id="Commands.Url" DefaultValue="https://localhost:3000/commands"/>
+        <bt:Url id="Taskpane.Url" DefaultValue="https://localhost:3000/"/>
+        <bt:Url id="Taskpane.Url2" DefaultValue="https://localhost:3000/content-control-navigation"/>
+      </bt:Urls>
+      <bt:ShortStrings>
+        <bt:String id="GetStarted.Title" DefaultValue="Get started with Rulestar add-in!"/>
+        <bt:String id="CommandsGroup.Label" DefaultValue="Local"/>
+
+        <bt:String id="TaskpaneButton.Label" DefaultValue="Open Rulestar"/>
+        <bt:String id="TaskpaneButton3.Label" DefaultValue="Navigation"/>
+
+        <bt:String id="Rulestar.Tab1.TabLabel" DefaultValue="Rulestar" />
+        <bt:String id="Rulestar.GetStarted.Title" DefaultValue="Rulestar add-in was succesfully loaded"/>
+
+        <bt:String id="Rulestar.Menu.CC.Label" DefaultValue="Content Control" />
+        <bt:String id="Rulestar.Menu.CC.Remove.Label" DefaultValue="Remove" />
+      </bt:ShortStrings>
+      <bt:LongStrings>
+        <bt:String id="GetStarted.Description" DefaultValue="Rulestar add-in loaded succesfully. Go to the Home tab and click the 'Rulestar' button to get started."/>
+        <bt:String id="TaskpaneButton.Tooltip" DefaultValue="Click to open Rulestar Add-in"/>
+        <bt:String id="TaskpaneButton3.Tooltip" DefaultValue="Click to open Content Control navigation"/>
+
+        <bt:String id="Rulestar.GetStarted.Description" DefaultValue="Get going by opening Rulestar tab on the Ribbon"/>
+
+        <bt:String id="Rulestar.Menu.CC.Tooltip" DefaultValue="Manage Content Control" />
+        <bt:String id="Rulestar.Menu.CC.Remove.Tooltip" DefaultValue="Remove Content Control" />
+      </bt:LongStrings>
+    </Resources>
+
+  </VersionOverrides>
+</OfficeApp>
